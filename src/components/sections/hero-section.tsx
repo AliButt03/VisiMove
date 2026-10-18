@@ -35,7 +35,7 @@ export function HeroSection() {
           >
             <Reveal delay={0}>
               <p className="mb-4 text-xs uppercase tracking-[0.24em] text-cyan-200/75 sm:mb-5 sm:text-sm sm:tracking-[0.35em]">
-                VisiMove
+                Eye-gaze mouse for Windows
               </p>
             </Reveal>
 
@@ -50,9 +50,9 @@ export function HeroSection() {
 
             <Reveal delay={170} y={26}>
               <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/72 sm:mx-0 sm:mt-6 sm:text-base">
-                VisiMove is a cinematic, accessibility-focused interface built to
-                turn eye movement into cursor control, scrolling, and click
-                interaction for a more human digital experience.
+                VisiMove turns an ordinary webcam into a hands-free mouse. Look
+                where you want the cursor, rest your gaze to click. Built for
+                people with limited mobility, and it runs entirely on your PC.
               </p>
             </Reveal>
 
@@ -71,8 +71,8 @@ export function HeroSection() {
             <Reveal delay={330} y={18}>
               <div className="mt-7 flex flex-wrap items-center justify-center gap-3 sm:mt-8 sm:justify-start">
                 <GlassTag label="Accessibility-first" />
-                <GlassTag label="ML-powered eye tracking" />
-                <GlassTag label="Windows phase one" />
+                <GlassTag label="Any webcam, no extra hardware" />
+                <GlassTag label="100% offline" />
               </div>
             </Reveal>
           </div>
@@ -88,7 +88,7 @@ export function HeroSection() {
             >
               <div className="rounded-full border border-cyan-200/10 bg-white/[0.045] px-4 py-3 backdrop-blur-md shadow-[0_12px_30px_rgba(0,0,0,0.2)]">
                 <p className="text-[11px] uppercase tracking-[0.28em] text-white/58">
-                  Real-time gaze intent
+                  Real-time gaze, ~28 FPS
                 </p>
               </div>
             </div>
@@ -101,7 +101,7 @@ export function HeroSection() {
                 <p className="text-xs uppercase tracking-[0.26em] text-white/45">
                   Platform focus
                 </p>
-                <p className="mt-2 text-sm text-white/75">Windows desktop</p>
+                <p className="mt-2 text-sm text-white/75">Windows 10 &amp; 11</p>
               </div>
             </div>
 
@@ -114,7 +114,7 @@ export function HeroSection() {
                   Interaction layer
                 </p>
                 <p className="mt-2 text-sm text-white/75">
-                  Scroll, select, click
+                  Dwell, zoom, click
                 </p>
               </div>
             </div>

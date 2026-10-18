@@ -12,16 +12,45 @@
   --brand-blue: #60a5fa;
   --brand-violet: #8b5cf6;
 
-  --font-heading: var(--font-space-grotesk);
-  --font-body: var(--font-inter);
+  --font-heading: var(--font-syne);
+  --font-body: var(--font-instrument-sans);
+}
+
+@theme inline {
+  --font-display: var(--font-syne), sans-serif;
+  --font-sans: var(--font-instrument-sans), sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Lenis owns smooth scrolling; native smooth scroll fought it (nav links did not move the page). */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {

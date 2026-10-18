@@ -8,7 +8,7 @@ const platformCards = [
   {
     title: "Windows available",
     description:
-      "Phase one focuses on desktop deployment, stability, and practical usability for real-world interaction.",
+      "Windows 10 or 11 (64-bit) and any webcam. A free, roughly 95 MB installer, with no admin rights needed.",
     icon: Monitor,
   },
   {
@@ -35,7 +35,7 @@ export function DownloadSection() {
               <SectionHeading
                 eyebrow="Download"
                 title="Take control with VisiMove"
-                description="Start with the Windows release in phase one and explore a more accessible way to interact with the screen through eye-driven control."
+                description="Install VisiMove, calibrate once in about 30 seconds, and start controlling your computer with your eyes."
                 align="center"
               />
             </Reveal>
@@ -94,7 +94,7 @@ export function DownloadSection() {
                   <span className="pointer-events-none absolute inset-0 -translate-x-[130%] bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-[130%]" />
                   <Download className="relative z-10 mt-0.5 h-3.5 w-3.5 shrink-0 text-cyan-300 sm:mt-0" />
                   <span className="relative z-10">
-                    Windows release is the primary focus for phase one
+                    Windows may show a SmartScreen notice for new apps: choose More info, then Run anyway
                   </span>
                 </div>
               </div>

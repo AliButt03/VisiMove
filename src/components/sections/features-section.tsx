@@ -3,7 +3,7 @@ import {
   Monitor,
   MousePointerClick,
   Move,
-  ScrollText,
+  ZoomIn,
   Smartphone,
 } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
@@ -12,39 +12,39 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 const features = [
   {
-    title: "Eye-based cursor navigation",
+    title: "Gaze-controlled cursor",
     description:
-      "Translate gaze direction into practical cursor movement with a clean and intuitive interaction layer.",
+      "The cursor follows your eyes and glides between targets instead of jumping, and it holds still while you look at one spot.",
     icon: Move,
   },
   {
-    title: "Intent-driven scrolling",
+    title: "Two-step zoom click",
     description:
-      "Navigate vertically through content using eye-based control patterns designed for fluid screen movement.",
-    icon: ScrollText,
+      "A first dwell magnifies the area, a second zooms further, a third clicks, so even small icons are reachable.",
+    icon: ZoomIn,
   },
   {
-    title: "Click through gaze logic",
+    title: "Left, double and right click",
     description:
-      "Enable click-style interaction through intentional eye gestures and selection-focused control behavior.",
+      "Pick the click type from big buttons in the zoom view. Optional blink clicking is available for those who prefer it.",
     icon: MousePointerClick,
   },
   {
     title: "Accessibility-first experience",
     description:
-      "Built around real accessibility needs for users with paralysis and severe mobility limitations.",
+      "No hands needed after setup, an on-screen position guide, and adjustable dwell time to match each user.",
     icon: Eye,
   },
   {
-    title: "Desktop-first deployment",
+    title: "Private by design",
     description:
-      "Phase one is focused on a Windows desktop experience optimized for stability and practical usability.",
+      "Everything runs on your computer. Camera images are processed locally and never uploaded anywhere.",
     icon: Monitor,
   },
   {
     title: "Future platform expansion",
     description:
-      "The long-term roadmap includes Android and iOS support for broader hands-free control access.",
+      "Android and iOS versions are on the roadmap, bringing the same hands-free control to phones and tablets.",
     icon: Smartphone,
   },
 ];
@@ -57,7 +57,7 @@ export function FeaturesSection() {
           <SectionHeading
             eyebrow="Capabilities"
             title="Built for meaningful digital control"
-            description="VisiMove is not just a concept interface. Its product direction is focused on real cursor behavior, scrolling, selection, and accessible interaction design."
+            description="Everything you need to point and click with your eyes, tested on real hardware with an ordinary laptop webcam."
             align="center"
           />
         </Reveal>

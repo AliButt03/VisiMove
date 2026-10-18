@@ -12,39 +12,39 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 const trustItems = [
   {
-    title: "AI-powered tracking pipeline",
+    title: "MediaPipe face tracking",
     description:
-      "The interaction model is designed around eye movement interpretation and practical gaze-driven response logic.",
+      "478 face and iris landmarks per frame feed a gaze model trained on your own calibration, in real time on the CPU.",
     icon: Brain,
   },
   {
-    title: "Desktop stability first",
+    title: "Smooth, steady cursor",
     description:
-      "Phase one prioritizes a reliable Windows experience before expanding toward broader platform support.",
+      "One Euro filtering and fixation hold remove eye jitter, so the cursor stays calm while you read or aim.",
     icon: MonitorCog,
   },
   {
-    title: "Accessibility-led engineering",
+    title: "Safety built in",
     description:
-      "The system direction is shaped by usability, clarity, and meaningful assistive interaction rather than gimmick-based motion.",
+      "The cursor pauses when your face leaves the camera view or tracking becomes unreliable, and tracking starts paused.",
     icon: ShieldCheck,
   },
   {
-    title: "Scalable system design",
+    title: "Calibrated to you",
     description:
-      "The frontend and product structure are being built in a way that supports future platform growth and feature expansion.",
+      "Calibration checks itself on hidden test points and only replaces your profile when the new one is better.",
     icon: Workflow,
   },
   {
-    title: "Purposeful product vision",
+    title: "Lightweight",
     description:
-      "Every interface and motion decision is aligned with the goal of turning eye intent into practical digital control.",
+      "Runs at around 28 frames per second on an ordinary laptop. No GPU, no eye-tracking hardware, no Python install.",
     icon: Sparkles,
   },
   {
-    title: "Privacy-conscious direction",
+    title: "Offline and private",
     description:
-      "The trust layer should communicate responsible handling of tracking-related interaction systems as the product evolves.",
+      "No account, no cloud, no internet connection needed. Calibration data stays in your Windows user folder.",
     icon: Lock,
   },
 ];
@@ -57,7 +57,7 @@ export function TechnologySection() {
           <SectionHeading
             eyebrow="Technology & trust"
             title="Built with precision, shaped for real use"
-            description="VisiMove should feel advanced, but also trustworthy. This section communicates the engineering mindset, accessibility direction, and product maturity behind the experience."
+            description="Proven computer-vision building blocks, tuned through live testing for steady, safe and private hands-free control."
             align="center"
           />
         </Reveal>

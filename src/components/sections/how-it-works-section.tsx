@@ -6,23 +6,23 @@ import { SectionHeading } from "@/components/ui/section-heading";
 const steps = [
   {
     number: "01",
-    title: "Track",
+    title: "Calibrate",
     description:
-      "VisiMove begins by observing eye movement patterns and gaze direction through the tracking pipeline.",
+      "Follow a moving dot for about 30 seconds. VisiMove learns how your eyes look when you view each part of the screen.",
     icon: ScanEye,
   },
   {
     number: "02",
-    title: "Interpret",
+    title: "Look",
     description:
-      "The system maps user intent into meaningful interaction signals for navigation, selection, and on-screen behavior.",
+      "Face landmarks from your webcam are turned into a smooth, steady cursor that follows your gaze across the whole screen.",
     icon: BrainCircuit,
   },
   {
     number: "03",
-    title: "Control",
+    title: "Dwell to click",
     description:
-      "Scrolling, cursor movement, and click-style actions are translated into a practical hands-free screen experience.",
+      "Rest your gaze to open a zoomed view, then rest it on your target. Choose left, double or right click from the zoom view.",
     icon: MoveRight,
   },
 ];
@@ -35,7 +35,7 @@ export function HowItWorksSection() {
           <SectionHeading
             eyebrow="How it works"
             title="From gaze to action"
-            description="The first phase of VisiMove is built around a clear interaction flow: detect eye movement, interpret intent, and turn that into usable screen control."
+            description="Three steps, no hands. Webcam gaze is never pixel-perfect, so VisiMove zooms in before it clicks: the target gets bigger instead of your aim having to get better."
             align="center"
           />
         </Reveal>

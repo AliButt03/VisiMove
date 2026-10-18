@@ -144,6 +144,3 @@ The project uses `next/font` to load Google Fonts. A production build requires n
 npm run build
 ```
 
-## Project Status
-
-This is the frontend presentation layer for the VisiMove FYP project. The current version focuses on product storytelling, accessibility positioning, responsive UI, and 3D visual identity.

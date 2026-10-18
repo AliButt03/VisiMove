@@ -15,8 +15,10 @@ export function AnimatedButton({
   variant = "primary",
   className,
 }: AnimatedButtonProps) {
+  // In-page (#...) and external links are plain anchors: Next's Link swallowed hash jumps.
+  const Anchor = href.startsWith("/") ? Link : "a";
   return (
-    <Link
+    <Anchor
       href={href}
       className={cn(
         "group relative inline-flex min-h-12 items-center justify-center gap-2 overflow-hidden rounded-full px-5 py-3.5 text-center text-sm font-medium leading-[1.25rem] transition-all duration-300 will-change-transform sm:px-6",
@@ -60,6 +62,6 @@ export function AnimatedButton({
           variant === "primary" ? "text-slate-950" : "text-white"
         )}
       />
-    </Link>
+    </Anchor>
   );
 }

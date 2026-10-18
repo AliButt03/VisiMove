@@ -9,11 +9,7 @@ export function SceneController() {
 
   return (
     <Float speed={0.72} rotationIntensity={0.06} floatIntensity={0.1}>
-      <VisiMoveEyeModel
-        section={phase.section}
-        sectionProgress={phase.sectionProgress}
-        globalProgress={phase.globalProgress}
-      />
+      <VisiMoveEyeModel phase={phase} />
     </Float>
   );
 }

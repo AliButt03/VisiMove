@@ -7,19 +7,19 @@ const aboutCards = [
   {
     title: "Eye-driven interaction",
     description:
-      "VisiMove is built around the idea that gaze can become a precise and meaningful input layer for navigating digital interfaces.",
+      "Your eyes become the pointer. A webcam and a 30-second calibration are all VisiMove needs to follow where you look.",
     icon: ScanEye,
   },
   {
     title: "Intent into motion",
     description:
-      "The product vision is to transform eye movement into natural actions like cursor control, scrolling, and click-based selection.",
+      "Rest your gaze on something to select it. A magnified view makes small targets like taskbar icons easy to hit.",
     icon: MousePointer2,
   },
   {
     title: "Accessible by design",
     description:
-      "Created with accessibility at the center, VisiMove aims to support people with paralysis and limited mobility through hands-free control.",
+      "Designed for people with paralysis and limited mobility, so the whole flow works without touching a mouse or keyboard.",
     icon: Sparkles,
   },
 ];
@@ -32,7 +32,7 @@ export function AboutSection() {
           <SectionHeading
             eyebrow="What is VisiMove"
             title="A more human way to control the screen"
-            description="VisiMove is a cinematic accessibility-focused experience built around eye movement as input. The goal is to create intuitive control that feels modern, empowering, and real."
+            description="VisiMove is a final-year project that makes hands-free computer control affordable: no eye-tracking hardware, no subscription, no internet connection. Just your webcam and your eyes."
             align="center"
           />
         </Reveal>

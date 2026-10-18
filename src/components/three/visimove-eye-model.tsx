@@ -2,15 +2,13 @@
 
 import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
-import { useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef } from "react";
 import { Mesh } from "three";
 import type { Group } from "three";
-import type { SceneSection } from "@/hooks/use-scene-phase";
+import type { ScenePhase } from "@/hooks/use-scene-phase";
 
 type VisiMoveEyeModelProps = {
-  section: SceneSection;
-  sectionProgress: number;
-  globalProgress: number;
+  phase: RefObject<ScenePhase>;
 };
 
 function lerp(start: number, end: number, alpha: number) {
@@ -21,11 +19,7 @@ function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max);
 }
 
-function EyeModelScene({
-  section,
-  sectionProgress,
-  globalProgress,
-}: VisiMoveEyeModelProps) {
+function EyeModelScene({ phase }: VisiMoveEyeModelProps) {
   const groupRef = useRef<Group | null>(null);
   const modelRef = useRef<Group | null>(null);
   const gltf = useGLTF("/models/visimove-eye.glb");
@@ -42,6 +36,7 @@ function EyeModelScene({
   }, [gltf]);
 
   useFrame((state) => {
+    const { section, sectionProgress, globalProgress } = phase.current;
     const t = state.clock.elapsedTime;
     const viewportWidth = state.size.width;
     const isMobile = viewportWidth < 768;
@@ -104,6 +99,13 @@ function EyeModelScene({
       targetScale = lerp(1.0, 0.94, sectionProgress);
     }
 
+    // Past the hero the eye sat behind centred copy (e.g. the features intro); keep it at the
+    // right edge as an accent so text stays readable.
+    if (section !== "hero") {
+      targetX = isMobile ? 1.55 : isTablet ? 2.5 : 3.25;
+      targetScale *= isMobile ? 0.6 : 0.75;
+    }
+
     if (groupRef.current) {
       groupRef.current.position.x = lerp(
         groupRef.current.position.x,
@@ -160,18 +162,8 @@ function EyeModelScene({
   );
 }
 
-export function VisiMoveEyeModel({
-  section,
-  sectionProgress,
-  globalProgress,
-}: VisiMoveEyeModelProps) {
-  return (
-    <EyeModelScene
-      section={section}
-      sectionProgress={sectionProgress}
-      globalProgress={globalProgress}
-    />
-  );
+export function VisiMoveEyeModel({ phase }: VisiMoveEyeModelProps) {
+  return <EyeModelScene phase={phase} />;
 }
 
 useGLTF.preload("/models/visimove-eye.glb");

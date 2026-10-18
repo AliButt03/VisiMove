@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { RefObject, useEffect, useRef } from "react";
 
 export type SceneSection =
   | "hero"
@@ -10,7 +10,7 @@ export type SceneSection =
   | "technology"
   | "download";
 
-type ScenePhase = {
+export type ScenePhase = {
   section: SceneSection;
   sectionProgress: number;
   globalProgress: number;
@@ -27,8 +27,12 @@ function getSectionRange(element: HTMLElement) {
   return { top, height };
 }
 
-export function useScenePhase(): ScenePhase {
-  const [phase, setPhase] = useState<ScenePhase>({
+/**
+ * Scroll phase for the 3D scene, kept in a ref: the render loop reads it every frame, so updating
+ * React state on each scroll frame only re-rendered the whole scene tree for nothing.
+ */
+export function useScenePhase(): RefObject<ScenePhase> {
+  const phase = useRef<ScenePhase>({
     section: "hero",
     sectionProgress: 0,
     globalProgress: 0,
@@ -81,11 +85,11 @@ export function useScenePhase(): ScenePhase {
         }
       }
 
-      setPhase({
+      phase.current = {
         section: activeSection,
         sectionProgress: activeProgress,
         globalProgress,
-      });
+      };
 
       frame = 0;
     };
