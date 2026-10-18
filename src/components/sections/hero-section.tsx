@@ -88,7 +88,7 @@ export function HeroSection() {
             >
               <div className="rounded-full border border-cyan-200/10 bg-white/[0.045] px-4 py-3 backdrop-blur-md shadow-[0_12px_30px_rgba(0,0,0,0.2)]">
                 <p className="text-[11px] uppercase tracking-[0.28em] text-white/58">
-                  Real-time gaze, ~28 FPS
+                  Real-time gaze tracking
                 </p>
               </div>
             </div>

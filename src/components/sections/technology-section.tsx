@@ -38,7 +38,7 @@ const trustItems = [
   {
     title: "Lightweight",
     description:
-      "Runs at around 28 frames per second on an ordinary laptop. No GPU, no eye-tracking hardware, no Python install.",
+      "Runs smoothly on an ordinary laptop. No GPU, no eye-tracking hardware, no Python install.",
     icon: Sparkles,
   },
   {

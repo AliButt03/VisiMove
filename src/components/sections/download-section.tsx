@@ -1,4 +1,4 @@
-import { Download, Monitor, Smartphone } from "lucide-react";
+import { Monitor, Smartphone } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { AnimatedButton } from "@/components/ui/animated-button";
 import { GlassPanel } from "@/components/ui/glass-panel";
@@ -8,7 +8,7 @@ const platformCards = [
   {
     title: "Windows available",
     description:
-      "Windows 10 or 11 (64-bit) and any webcam. A free, roughly 95 MB installer, with no admin rights needed.",
+      "Windows 10 or 11 (64-bit) and any webcam. Free to install, with no admin rights needed.",
     icon: Monitor,
   },
   {
@@ -87,18 +87,6 @@ export function DownloadSection() {
                 );
               })}
             </div>
-
-            <Reveal delay={220} y={18}>
-              <div className="mt-8 flex justify-center">
-                <div className="group relative inline-flex max-w-full items-start gap-2 overflow-hidden rounded-2xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.10)_0%,rgba(255,255,255,0.05)_100%)] px-4 py-3 text-left text-xs leading-5 text-white/75 shadow-[0_10px_28px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300/20 hover:text-white sm:items-center sm:rounded-full sm:py-2 sm:text-center">
-                  <span className="pointer-events-none absolute inset-0 -translate-x-[130%] bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-[130%]" />
-                  <Download className="relative z-10 mt-0.5 h-3.5 w-3.5 shrink-0 text-cyan-300 sm:mt-0" />
-                  <span className="relative z-10">
-                    Windows may show a SmartScreen notice for new apps: choose More info, then Run anyway
-                  </span>
-                </div>
-              </div>
-            </Reveal>
           </div>
         </GlassPanel>
       </div>

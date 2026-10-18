@@ -5,7 +5,6 @@ const footerLinks = [
   { label: "About", href: "#about" },
   { label: "Features", href: "#features" },
   { label: "Download", href: "#download" },
-  { label: "GitHub", href: "https://github.com/AliButt03/visimove-desktop" },
 ];
 
 export function Footer() {
@@ -24,13 +23,13 @@ export function Footer() {
                       Visi<span className="text-gradient">Move</span>
                     </p>
                     <p className="mt-1 text-sm leading-6 text-white/55">
-                      Hands-free computer control with an ordinary webcam. Final-year project, {new Date().getFullYear()}.
+                      Hands-free computer control with an ordinary webcam.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center sm:justify-end sm:gap-3">
+              <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:items-center sm:justify-end sm:gap-3">
                 {footerLinks.map((link, index) => (
                   <Reveal key={link.label} delay={index * 90} y={14}>
                     <a
