@@ -42,7 +42,11 @@ export function DownloadSection() {
 
             <Reveal delay={100} y={24}>
               <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
-                <AnimatedButton href="/" variant="primary" className="w-full sm:w-auto">
+                <AnimatedButton
+                  href="https://github.com/AliButt03/visimove-desktop/releases/latest/download/VisiMove-Setup.exe"
+                  variant="primary"
+                  className="w-full sm:w-auto"
+                >
                   Download .exe
                 </AnimatedButton>
 

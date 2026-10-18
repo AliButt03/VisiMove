@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local browser profile used for testing (cookies, logins) - never commit
+.chrome-profile/
+
+# OS / editor files
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
